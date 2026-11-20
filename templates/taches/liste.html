@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contenu %}
+<h1>Gestion des tâches</h1>
+<ul>{% for tache in taches %}
+<li><strong>{{ tache.titre }}</strong> — {{ tache.get_statut_display }} — priorité {{ tache.priorite }}
+<p>{{ tache.description }}</p>
+<a href="{% url 'modifier_tache' tache.pk %}">Modifier</a>
+<form method="post" action="{% url 'supprimer_tache' tache.pk %}" style="display:inline">
+{% csrf_token %}<button type="submit">Supprimer</button></form></li>
+{% empty %}<li>Aucune tâche.</li>{% endfor %}</ul>
+{% endblock %}

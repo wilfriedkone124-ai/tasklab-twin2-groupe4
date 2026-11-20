@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TaskLab TWIN2</title>
+<style>body{font-family:system-ui;max-width:850px;margin:35px auto;padding:0 16px;color:#172033}
+nav{display:flex;gap:18px;padding:18px;background:#eef2ff;border-radius:12px}
+a{color:#254bc0}li{margin:14px 0;padding:12px;background:#f8fafc;border-radius:8px}
+button{cursor:pointer}input,textarea,select{padding:8px;margin:6px}</style></head>
+<body><nav><a href="{% url 'liste_taches' %}">TaskLab</a><a href="{% url 'creer_tache' %}">Ajouter une tâche</a></nav>
+<main>{% block contenu %}{% endblock %}</main></body></html>
