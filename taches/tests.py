@@ -5,6 +5,7 @@ from .forms import TacheForm
 from .models import Tache
 
 
+
 class TacheTests(TestCase):
     def setUp(self):
         self.tache = Tache.objects.create(
