@@ -79,4 +79,3 @@ class TacheTests(TestCase):
         response = self.client.get(reverse("supprimer_tache", args=[tache.pk]))
         self.assertEqual(response.status_code, 405)
         self.assertTrue(Tache.objects.filter(pk=tache.pk).exists())
-        

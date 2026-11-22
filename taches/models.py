@@ -14,3 +14,7 @@ class Tache(models.Model):
 
     def __str__(self):
         return self.titre
+    class Meta:
+        ordering = ["-date_creation"]
+        verbose_name = "tâche"
+        verbose_name_plural = "tâches"
